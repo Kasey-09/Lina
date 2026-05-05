@@ -34,7 +34,7 @@ public class Secundario extends javax.swing.JFrame {
         Btn1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        Btn2 = new javax.swing.JButton();
+        Btn4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         Btn1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -54,12 +54,12 @@ public class Secundario extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Btn2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Btn2.setText("REGRESAR");
-        Btn2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Btn2.addActionListener(new java.awt.event.ActionListener() {
+        Btn4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Btn4.setText("REGRESAR");
+        Btn4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn2ActionPerformed(evt);
+                Btn4ActionPerformed(evt);
             }
         });
 
@@ -75,7 +75,7 @@ public class Secundario extends javax.swing.JFrame {
                 .addContainerGap(196, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(Btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(163, 163, 163))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -87,7 +87,7 @@ public class Secundario extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
-                .addComponent(Btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
 
@@ -105,13 +105,13 @@ public class Secundario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn2ActionPerformed
+    private void Btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn4ActionPerformed
        
         ventanaPadre.setVisible(true);
         this.dispose();
         
         
-    }//GEN-LAST:event_Btn2ActionPerformed
+    }//GEN-LAST:event_Btn4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,7 +150,7 @@ public class Secundario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn1;
-    private javax.swing.JButton Btn2;
+    private javax.swing.JButton Btn4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

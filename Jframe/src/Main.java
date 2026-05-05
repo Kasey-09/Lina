@@ -28,47 +28,78 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        Btn1 = new javax.swing.JButton();
+        Btn1Eje1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        Btn3Cerrar = new javax.swing.JButton();
+        Btn2Eje2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Btn1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        Btn1.setText("CAMBIAR VENTANA");
-        Btn1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        Btn1.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setBackground(new java.awt.Color(240, 195, 180));
+
+        Btn1Eje1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Btn1Eje1.setText("Ejercicio 1");
+        Btn1Eje1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn1Eje1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn1ActionPerformed(evt);
+                Btn1Eje1ActionPerformed(evt);
             }
         });
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("HOLA!");
+        jLabel1.setText("Menú de opciones");
         jLabel1.setAlignmentX(0.5F);
+
+        Btn3Cerrar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Btn3Cerrar.setText("Salir");
+        Btn3Cerrar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn3Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn3CerrarActionPerformed(evt);
+            }
+        });
+
+        Btn2Eje2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        Btn2Eje2.setText("Ejercicio 2");
+        Btn2Eje2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Btn2Eje2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn2Eje2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(197, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
+                .addComponent(Btn1Eje1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addComponent(Btn2Eje2, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(Btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(225, 225, 225))
+                        .addComponent(Btn3Cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(295, 295, 295))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(176, 176, 176))))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(259, 259, 259))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
-                .addComponent(Btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85))
+                .addGap(101, 101, 101)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Btn1Eje1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Btn2Eje2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addComponent(Btn3Cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -85,7 +116,7 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn1ActionPerformed
+    private void Btn1Eje1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn1Eje1ActionPerformed
        
         Secundario ventana2 = new Secundario(this);
         ventana2.setVisible(true);
@@ -93,7 +124,18 @@ public class Main extends javax.swing.JFrame {
         this.setVisible(false);
         
         
-    }//GEN-LAST:event_Btn1ActionPerformed
+    }//GEN-LAST:event_Btn1Eje1ActionPerformed
+
+    private void Btn3CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn3CerrarActionPerformed
+        
+        System.exit(0);
+        
+        
+    }//GEN-LAST:event_Btn3CerrarActionPerformed
+
+    private void Btn2Eje2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn2Eje2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn2Eje2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,7 +173,9 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Btn1;
+    private javax.swing.JButton Btn1Eje1;
+    private javax.swing.JButton Btn2Eje2;
+    private javax.swing.JButton Btn3Cerrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
