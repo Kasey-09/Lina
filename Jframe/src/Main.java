@@ -118,7 +118,7 @@ public class Main extends javax.swing.JFrame {
 
     private void Btn1Eje1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn1Eje1ActionPerformed
        
-        Secundario ventana2 = new Secundario(this);
+        Ventana2 ventana2 = new Ventana2(this);
         ventana2.setVisible(true);
         
         this.setVisible(false);
