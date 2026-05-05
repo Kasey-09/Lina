@@ -134,7 +134,10 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn3CerrarActionPerformed
 
     private void Btn2Eje2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn2Eje2ActionPerformed
-        // TODO add your handling code here:
+        Ventana3 ventana3 = new Ventana3(this);
+        ventana3.setVisible(true);
+        
+        this.setVisible(false);
     }//GEN-LAST:event_Btn2Eje2ActionPerformed
 
     /**
