@@ -18,7 +18,7 @@ public class Ventana2 extends javax.swing.JFrame {
     public Ventana2(JFrame principal) {
         initComponents();
         setLocationRelativeTo(null);
-        
+         this.setResizable(false);
         this.ventanaPadre = principal;
         
         
