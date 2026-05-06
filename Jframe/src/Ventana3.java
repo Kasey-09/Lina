@@ -18,9 +18,14 @@ public class Ventana3 extends javax.swing.JFrame {
     
     public Ventana3(JFrame principal) {
         initComponents();
+        this.getRootPane().setDefaultButton(BtnCalcular);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.ventanaPadre = principal;
+        BtnCalcular.requestFocusInWindow();
+
+        
+        
         
         
     }
@@ -87,92 +92,121 @@ public class Ventana3 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(240, 195, 180));
+        jPanel1.setBackground(new java.awt.Color(248, 249, 250));
 
+        BtnCalcular.setBackground(new java.awt.Color(0, 123, 255));
         BtnCalcular.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         BtnCalcular.setText("Calcular");
-        BtnCalcular.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnCalcular.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(248, 249, 250)));
         BtnCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnCalcularActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("a:");
         jLabel1.setAlignmentX(0.5F);
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("b:");
         jLabel2.setAlignmentX(0.5F);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("c:");
         jLabel3.setAlignmentX(0.5F);
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Fórmula:");
         jLabel4.setAlignmentX(0.5F);
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Calcular el valor de X");
         jLabel5.setAlignmentX(0.5F);
 
-        LabelFormula.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        LabelFormula.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         LabelFormula.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelFormula.setText("<html>(b + &radic;(b<sup>3</sup> - 4ac)) / (2 + c3)</html>");
         LabelFormula.setAlignmentX(0.5F);
 
-        labelResultado.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        labelResultado.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelResultado.setForeground(new java.awt.Color(0, 0, 255));
         labelResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelResultado.setText("0");
         labelResultado.setAlignmentX(0.5F);
+        labelResultado.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 153, 153)));
 
+        cajaTextoB.setBackground(new java.awt.Color(204, 204, 204));
+        cajaTextoB.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cajaTextoB.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 0, 0, new java.awt.Color(0, 0, 0)));
         cajaTextoB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaTextoBActionPerformed(evt);
             }
         });
+        cajaTextoB.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cajaTextoBKeyTyped(evt);
+            }
+        });
 
+        cajaTextoC.setBackground(new java.awt.Color(204, 204, 204));
+        cajaTextoC.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cajaTextoC.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 0, 0, new java.awt.Color(0, 0, 0)));
         cajaTextoC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaTextoCActionPerformed(evt);
             }
         });
+        cajaTextoC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cajaTextoCKeyTyped(evt);
+            }
+        });
 
+        cajaTextoA.setBackground(new java.awt.Color(204, 204, 204));
+        cajaTextoA.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cajaTextoA.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 0, 0, new java.awt.Color(0, 0, 0)));
         cajaTextoA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaTextoAActionPerformed(evt);
             }
         });
+        cajaTextoA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cajaTextoAKeyTyped(evt);
+            }
+        });
 
+        BtnRegresar.setBackground(new java.awt.Color(108, 117, 125));
         BtnRegresar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         BtnRegresar.setText("Regresar");
-        BtnRegresar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnRegresar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(248, 249, 250)));
         BtnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnRegresarActionPerformed(evt);
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Ingresa los valores:");
         jLabel7.setAlignmentX(0.5F);
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Resultado:");
         jLabel8.setAlignmentX(0.5F);
 
+        BtnLimpiar.setBackground(new java.awt.Color(108, 117, 125));
         BtnLimpiar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         BtnLimpiar.setText("Limpiar");
-        BtnLimpiar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnLimpiar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(248, 249, 250)));
         BtnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnLimpiarActionPerformed(evt);
@@ -183,14 +217,6 @@ public class Ventana3 extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(cajaTextoA, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cajaTextoB, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(123, 123, 123)
-                .addComponent(cajaTextoC, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(111, 111, 111))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -206,7 +232,7 @@ public class Ventana3 extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelFormula, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(LabelFormula, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(38, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(BtnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -218,6 +244,14 @@ public class Ventana3 extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(BtnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(320, 320, 320)))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(cajaTextoA, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cajaTextoB, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(123, 123, 123)
+                .addComponent(cajaTextoC, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(319, Short.MAX_VALUE)
@@ -237,28 +271,26 @@ public class Ventana3 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelFormula, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
+                .addGap(64, 64, 64)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cajaTextoA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cajaTextoB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cajaTextoC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cajaTextoA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cajaTextoB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cajaTextoC, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(BtnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BtnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(BtnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(labelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50))))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -324,14 +356,20 @@ public class Ventana3 extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCalcularActionPerformed
     private void cajaTextoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTextoBActionPerformed
         //Caja de texto C
+        
+        BtnCalcular.doClick();
     }//GEN-LAST:event_cajaTextoBActionPerformed
 
     private void cajaTextoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTextoCActionPerformed
         //Caja de texto B  
+        
+        BtnCalcular.doClick();
     }//GEN-LAST:event_cajaTextoCActionPerformed
 
     private void cajaTextoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTextoAActionPerformed
-        //Caja de texto A  
+        //Caja de texto A
+        
+        BtnCalcular.doClick();
     }//GEN-LAST:event_cajaTextoAActionPerformed
 
     private void BtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegresarActionPerformed
@@ -350,6 +388,27 @@ public class Ventana3 extends javax.swing.JFrame {
        labelResultado.setText("0");
     }//GEN-LAST:event_BtnLimpiarActionPerformed
 
+    private void cajaTextoAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cajaTextoAKeyTyped
+        char c = evt.getKeyChar();
+    if (!Character.isDigit(c)) {
+        evt.consume();
+    }
+    }//GEN-LAST:event_cajaTextoAKeyTyped
+
+    private void cajaTextoBKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cajaTextoBKeyTyped
+        char c = evt.getKeyChar();
+    if (!Character.isDigit(c)) {
+        evt.consume();
+    }
+    }//GEN-LAST:event_cajaTextoBKeyTyped
+
+    private void cajaTextoCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cajaTextoCKeyTyped
+        char c = evt.getKeyChar();
+    if (!Character.isDigit(c)) {
+        evt.consume();
+    
+    }//GEN-LAST:event_cajaTextoCKeyTyped
+    }
     /**
      * @param args the command line arguments
      */
