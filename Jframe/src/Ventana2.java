@@ -1,10 +1,13 @@
+/*
+* @author Kasey Bermúdez, C.l: 32078712
+ *        Jose Avila Vílchez, C.l: 31778251
+ */
+
 import java.io.PrintStream;
 import javax.swing.*;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-/*
-* @author Jose Avila C.I: 31.778.251
- */
+
 public class Ventana2 extends javax.swing.JFrame {
 
     private JFrame ventanaPadre;

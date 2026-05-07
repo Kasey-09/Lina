@@ -1,68 +1,58 @@
+/**
+ *
+ * @author Kasey Bermúdez, C.l: 32078712
+ *         Jose Avila Vílchez, C.l: 31778251
+ */
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Kasey
- */
 public class Ventana3 extends javax.swing.JFrame {
 
     private JFrame ventanaPadre;
-    
+
     public Ventana3(JFrame principal) {
         initComponents();
         this.getRootPane().setDefaultButton(BtnCalcular);
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.ventanaPadre = principal;
-        BtnCalcular.requestFocusInWindow();
 
-        
-        
-        
-        
     }
-    
-    public double funcionMatematica(double a, double b, double c){
-    
-        double valorX=0,cuboB=0;
+
+    public double funcionMatematica(double a, double b, double c) {
+
+        double valorX = 0, cuboB = 0;
         cuboB = Math.pow(b, 3);
-        
-        if ((cuboB-4*a*c) < 0){
-            
+
+        if ((cuboB - 4 * a * c) < 0) {
+
             JOptionPane.showMessageDialog(null, "Error: el radicando no puede ser menor a cero(0)");
             limpiarCampos();
             return 0;
-            
-        }else if(2+c*3 == 0){
-        
-             JOptionPane.showMessageDialog(null, "Error: el numerador no puede ser igual a cero(0)");
-             limpiarCampos();
-             return 0;
-        }else{
-        
-        valorX = (b+Math.sqrt(cuboB-4*a*c))/(2+c*3);
-        
-        return valorX;
-       
+
+        } else if (2 + c * 3 == 0) {
+
+            JOptionPane.showMessageDialog(null, "Error: el numerador no puede ser igual a cero(0)");
+            limpiarCampos();
+            return 0;
+        } else {
+
+            valorX = (b + Math.sqrt(cuboB - 4 * a * c)) / (2 + c * 3);
+
+            return valorX;
+
+        }
     }
-    }
-    
+
     public void limpiarCampos() {
-    cajaTextoA.setText("");
-    cajaTextoB.setText("");
-    cajaTextoC.setText("");
-    
-    // Opcional: poner el cursor de nuevo en el primer campo
-    cajaTextoA.requestFocus();
-}
+        cajaTextoA.setText("");
+        cajaTextoB.setText("");
+        cajaTextoC.setText("");
+
+        // Opcional: poner el cursor de nuevo en el primer campo
+        cajaTextoA.requestFocus();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -322,93 +312,87 @@ public class Ventana3 extends javax.swing.JFrame {
     private void BtnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCalcularActionPerformed
         //Calcular valor de X
         double resultado;
-        
-        if (cajaTextoA.getText().trim().isEmpty() || 
-            cajaTextoB.getText().trim().isEmpty() || 
-            cajaTextoC.getText().trim().isEmpty()) {
+
+        if (cajaTextoA.getText().trim().isEmpty()
+                || cajaTextoB.getText().trim().isEmpty()
+                || cajaTextoC.getText().trim().isEmpty()) {
             resultado = 0;
-            
+
             JOptionPane.showMessageDialog(null, "Error: Todos los campos son obligatorios.");
             String resultadoString = Double.toString(resultado);
             labelResultado.setText(resultadoString);
             limpiarCampos();
             cajaTextoA.requestFocus();
-            
-                    
-        } else {
-            
-        double a = Double.parseDouble(cajaTextoA.getText().trim());
-        double b = Double.parseDouble(cajaTextoB.getText().trim());
-        double c = Double.parseDouble(cajaTextoC.getText().trim());
-        
-        resultado = funcionMatematica(a, b, c);
-        String resultadoString = String.format("%.2f", resultado);
-        limpiarCampos();
-        labelResultado.setText(resultadoString);
-        
-}
 
-        
-        
-        
-        
-        
+        } else {
+
+            double a = Double.parseDouble(cajaTextoA.getText().trim());
+            double b = Double.parseDouble(cajaTextoB.getText().trim());
+            double c = Double.parseDouble(cajaTextoC.getText().trim());
+
+            resultado = funcionMatematica(a, b, c);
+            String resultadoString = String.format("%.2f", resultado);
+            limpiarCampos();
+            labelResultado.setText(resultadoString);
+
+        }
+
+
     }//GEN-LAST:event_BtnCalcularActionPerformed
     private void cajaTextoBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTextoBActionPerformed
         //Caja de texto C
-        
+
         BtnCalcular.doClick();
     }//GEN-LAST:event_cajaTextoBActionPerformed
 
     private void cajaTextoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTextoCActionPerformed
         //Caja de texto B  
-        
+
         BtnCalcular.doClick();
     }//GEN-LAST:event_cajaTextoCActionPerformed
 
     private void cajaTextoAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTextoAActionPerformed
         //Caja de texto A
-        
+
         BtnCalcular.doClick();
     }//GEN-LAST:event_cajaTextoAActionPerformed
 
     private void BtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegresarActionPerformed
         //Regresar al menú
-        
-        
+
         ventanaPadre.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BtnRegresarActionPerformed
 
     private void BtnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLimpiarActionPerformed
-       //Limpiar todo
-       
-       
-       limpiarCampos();
-       labelResultado.setText("0");
+        //Limpiar todo
+
+        limpiarCampos();
+        labelResultado.setText("0");
     }//GEN-LAST:event_BtnLimpiarActionPerformed
 
     private void cajaTextoAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cajaTextoAKeyTyped
         char c = evt.getKeyChar();
-    if (!Character.isDigit(c)) {
-        evt.consume();
-    }
+        if (!Character.isDigit(c)) {
+            evt.consume();
+        }
     }//GEN-LAST:event_cajaTextoAKeyTyped
 
     private void cajaTextoBKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cajaTextoBKeyTyped
         char c = evt.getKeyChar();
-    if (!Character.isDigit(c)) {
-        evt.consume();
-    }
+        if (!Character.isDigit(c)) {
+            evt.consume();
+        }
     }//GEN-LAST:event_cajaTextoBKeyTyped
 
     private void cajaTextoCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cajaTextoCKeyTyped
         char c = evt.getKeyChar();
-    if (!Character.isDigit(c)) {
-        evt.consume();
-    
+        if (!Character.isDigit(c)) {
+            evt.consume();
+
     }//GEN-LAST:event_cajaTextoCKeyTyped
     }
+
     /**
      * @param args the command line arguments
      */

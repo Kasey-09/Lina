@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author Kasey
+ * @author Kasey Bermúdez, C.l: 32078712
+ *         Jose Avila Vílchez, C.l: 31778251
  */
 public class Main extends javax.swing.JFrame {
 
